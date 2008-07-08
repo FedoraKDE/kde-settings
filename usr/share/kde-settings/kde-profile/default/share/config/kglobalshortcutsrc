@@ -1,0 +1,5 @@
+[KDE Global Shortcuts]
+kwin\x01Switch One Desktop Down=Ctrl+Alt+Down
+kwin\x01Switch One Desktop Up=Ctrl+Alt+Up
+kwin\x01Switch One Desktop to the Left=Ctrl+Alt+Left
+kwin\x01Switch One Desktop to the Right=Ctrl+Alt+Right

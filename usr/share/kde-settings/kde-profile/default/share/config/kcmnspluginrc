@@ -1,0 +1,4 @@
+[Misc]
+scanPaths=/usr/lib/firefox/plugins,/usr/lib/mozilla/plugins,$MOZILLA_FIVE_HOME/plugins,$HOME/.mozilla/plugins
+startkdeScan=false
+useArtsdsp=true

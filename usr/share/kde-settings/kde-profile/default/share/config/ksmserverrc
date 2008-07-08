@@ -1,0 +1,12 @@
+[General]
+screenCount=1
+
+[LegacySession: saved at previous logout]
+count=0
+
+[Session: saved at previous logout]
+clientId1=10d8cecf96000111065458100000063760027
+count=1
+program1=kmix
+restartCommand1=kmix,-session,10d8cecf96000111065458100000063760027_1110891555_426100
+restartStyleHint1=0
