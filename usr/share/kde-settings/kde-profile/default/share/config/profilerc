@@ -1,0 +1,35 @@
+[application/pdf - 1]
+AllowAsDefault=true
+Application=Graphics/kghostview.desktop
+GenericServiceType=Application
+Preference=4
+ServiceType=application/pdf
+
+[application/pdf - 2]
+AllowAsDefault=true
+Application=Graphics/xpdf.desktop
+GenericServiceType=Application
+Preference=3
+ServiceType=application/pdf
+
+[application/pdf - 3]
+AllowAsDefault=true
+Application=nsplugin.desktop
+GenericServiceType=KParts/ReadOnlyPart
+Preference=2
+ServiceType=application/pdf
+
+[application/pdf - 4]
+AllowAsDefault=true
+Application=Graphics/acroread.desktop
+GenericServiceType=Application
+Preference=1
+ServiceType=application/pdf
+
+[application/pdf - 5]
+AllowAsDefault=true
+Application=Graphics/kghostview.desktop
+GenericServiceType=KParts/ReadOnlyPart
+Preference=1
+ServiceType=application/pdf
+

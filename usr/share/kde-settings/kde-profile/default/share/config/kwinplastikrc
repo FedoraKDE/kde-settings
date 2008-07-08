@@ -1,0 +1,6 @@
+[General]
+AnimateButtons=true
+CloseOnMenuDoubleClick=false
+ColoredBorder=true
+TitleAlignment=AlignLeft
+TitleShadow=true

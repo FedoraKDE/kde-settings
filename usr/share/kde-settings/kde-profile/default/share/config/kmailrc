@@ -1,0 +1,7 @@
+[General]
+transports=1
+
+[Transport 1]
+host=/usr/sbin/sendmail
+name=Sendmail
+type=sendmail
