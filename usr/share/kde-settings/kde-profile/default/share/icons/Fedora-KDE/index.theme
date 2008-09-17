@@ -1,13 +1,12 @@
 [Icon Theme]
 Name=Fedora-KDE
-
-Comment=Fedora-KDE Icon Theme (modified Oxygen) 
+Comment=Fedora-KDE Icon Theme (modified Oxygen)
 
 DisplayDepth=32
 
-Inherits=Echo, oxygen, crystalsvg
+Inherits=Echo,oxygen,crystalsvg
 
-Example=get-started
+Example=folder
 
 LinkOverlay=link
 LockOverlay=lockoverlay
@@ -21,15 +20,25 @@ ToolbarSizes=16,22,32,48
 MainToolbarDefault=22
 MainToolbarSizes=16,22,32,48
 SmallDefault=16
-SmallSizes=16,24
+SmallSizes=16,22
 PanelDefault=32
-PanelSizes=16,22,24,32,36,48,64,128
+PanelSizes=16,22,32,48,64,128
 
-Directories=16x16/places,22x22/places,24x24/places,32x32/places,36x36/places,48x48/places,64x64/places,128x128/places,scalable/places
+Directories=16x16/apps,16x16/places,22x22/apps,22x22/places,32x32/apps,32x32/places,48x48/apps,48x48/places,64x64/apps,64x64/places,128x128/apps,128x128/places,scalable/places
+
+[16x16/apps]
+Size=16
+Context=Applications
+Type=Threshold
 
 [16x16/places]
 Size=16
 Context=Places
+Type=Threshold
+
+[22x22/apps]
+Size=22
+Context=Applications
 Type=Threshold
 
 [22x22/places]
@@ -37,9 +46,9 @@ Size=22
 Context=Places
 Type=Threshold
 
-[24x24/places]
-Size=24
-Context=Places
+[32x32/apps]
+Size=32
+Context=Applications
 Type=Threshold
 
 [32x32/places]
@@ -47,9 +56,9 @@ Size=32
 Context=Places
 Type=Threshold
 
-[36x36/places]
-Size=36
-Context=Places
+[48x48/apps]
+Size=48
+Context=Applications
 Type=Threshold
 
 [48x48/places]
@@ -57,9 +66,19 @@ Size=48
 Context=Places
 Type=Threshold
 
+[64x64/apps]
+Size=64
+Context=Applications
+Type=Threshold
+
 [64x64/places]
 Size=64
 Context=Places
+Type=Threshold
+
+[128x128/apps]
+Size=128
+Context=Applications
 Type=Threshold
 
 [128x128/places]
