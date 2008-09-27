@@ -24,7 +24,7 @@ SmallSizes=16,22
 PanelDefault=32
 PanelSizes=16,22,32,48,64,128
 
-Directories=16x16/apps,16x16/places,22x22/apps,22x22/places,32x32/apps,32x32/places,48x48/apps,48x48/places,64x64/apps,64x64/places,128x128/apps,128x128/places,scalable/places
+Directories=16x16/apps,16x16/places,22x22/apps,22x22/places,32x32/apps,32x32/places,48x48/apps,48x48/places,64x64/apps,64x64/places,128x128/apps,128x128/places,scalable/actions,scalable/mimetypes,scalable/places
 
 [16x16/apps]
 Size=16
@@ -85,6 +85,20 @@ Type=Threshold
 Size=128
 Context=Places
 Type=Threshold
+
+[scalable/actions]
+Size=128
+Context=Actions
+Type=Scalable
+MinSize=32
+MaxSize=256
+
+[scalable/mimetypes]
+Size=128
+Context=MimeTypes
+Type=Scalable
+MinSize=32
+MaxSize=256
 
 [scalable/places]
 Size=128
