@@ -4,7 +4,7 @@ Comment=Fedora-KDE Icon Theme (modified Oxygen)
 
 DisplayDepth=32
 
-Inherits=Echo,oxygen,crystalsvg
+Inherits=oxygen,crystalsvg
 
 Example=folder
 
