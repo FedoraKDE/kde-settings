@@ -21,3 +21,6 @@ ShowFileTips=false
 StandardFont=Sans,10,-1,5,50,0,0,0,0,0
 UnderlineLinks=false
 WordWrapText=true
+
+[UserSettings]
+HomeURL=http://www.fedoraproject.org/
