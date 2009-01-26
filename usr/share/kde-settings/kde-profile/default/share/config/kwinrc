@@ -1,3 +1,6 @@
+[Compositing]
+Enabled=false
+
 [Style]
 PluginLib=kwin3_oxygen
 ShowToolTips=true
