@@ -24,7 +24,7 @@ if [ -x "${GPG_AGENT}" ] ; then
     eval "$(cat \"${GPG_AGENT_INFO_FILE}\")"
     eval "$(cut -d= -f 1 < \"${GPG_AGENT_INFO_FILE}\" | xargs echo export)"
   else
-    eval "$(${GPG_AGENT} -s --daemon --write-env-file \"${GPG_AGENT_INFO_FILE}\" ${GPG_OPTIONS})"
+    eval "$(${GPG_AGENT} -s --daemon --write-env-file ${GPG_OPTIONS})"
   fi
 
 fi
