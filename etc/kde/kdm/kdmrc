@@ -268,8 +268,8 @@ AllowShutdown=Root
 # Default is Never
 #ScheduledSd=Optional
 # The directories containing session type definitions in .desktop format.
-# Default is "/usr/share/apps/kdm/sessions"
-SessionsDirs=/usr/share/xsessions,/usr/share/apps/kdm/sessions,/etc/X11/dm/sessions
+# Default is "/usr/share/kde4/apps/kdm/sessions"
+SessionsDirs=/usr/share/xsessions,/usr/share/kde4/apps/kdm/sessions
 # The file (relative to $HOME) to redirect the session output to. This is
 # a printf format string; one %d will be replaced with the display name.
 # Default is ".xsession-errors"
