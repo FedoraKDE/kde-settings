@@ -437,10 +437,9 @@ ForgingSeed=1108476160
 UseTheme=true
 # The theme to use for the greeter. Can point to either a directory or an XML
 # file. Default is "/usr/share/kde4/apps/kdm/themes/circles"
-Theme=/usr/share/kde4/apps/kdm/themes/leonidas
-#Theme=(uncomment and insert Fedora 9 theme here)
+Theme=/usr/share/kde4/apps/kdm/themes/oxygen-air
 # Set the widget color scheme 
-ColorScheme=ObsidianCoast
+#ColorScheme=ObsidianCoast
 
 # Core config for local displays
 [X-:*-Core]
