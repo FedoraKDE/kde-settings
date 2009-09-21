@@ -68,14 +68,14 @@ ServerVTs=1
 ConsoleTTYs=tty2,tty3,tty4,tty5,tty6
 # Where KDM should store its PID (do not store if empty).
 # Default is ""
-PidFile=/var/run/kdm.pid
+PidFile=/var/run/kdm/kdm.pid
 # Whether KDM should lock the PID file to prevent having multiple KDM
 # instances running at once. Do not change unless you are brave.
 # Default is true
 #LockPidFile=false
 # Where to store authorization files.
 # Default is "/var/run/xauth"
-#AuthDir=/tmp
+AuthDir=/var/run/kdm
 # Whether KDM should automatically re-read configuration files, if it
 # finds them having changed.
 # Default is true
@@ -234,7 +234,7 @@ Session=/etc/kde/kdm/Xsession
 # Where to put the user's X-server authorization file if ~/.Xauthority
 # cannot be created.
 # Default is "/tmp"
-#UserAuthDir=
+UserAuthDir=/var/run/kdm
 # Whether to automatically restart sessions after X-server crashes.
 # Note that enabling this makes circumventing screen lockers other than
 # KDE's built-in one possible! Default is false
