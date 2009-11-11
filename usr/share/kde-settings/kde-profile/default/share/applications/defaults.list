@@ -3,6 +3,7 @@ application/ogg=kde4-dragonplayer.desktop;
 application/pdf=kde4-okular.desktop;
 application/postscript=kde4-okular.desktop;
 application/x-arj=kde4-ark.desktop;
+application/x-bittorrent=kde4-ktorrent.desktop;kde4-kget.desktop;
 application/x-bzip-compressed-tar=kde4-ark.desktop;
 application/x-bzip=kde4-ark.desktop;
 application/x-compressed-tar=kde4-ark.desktop;
