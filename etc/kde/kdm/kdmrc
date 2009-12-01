@@ -62,10 +62,10 @@ ReserveServers=:1,:2,:3
 # used only if it is free. If all VTs in this list are used up, the next free
 # one greater than the last one in this list will be allocated.
 # Default is ""
-ServerVTs=1
+ServerVTs=-1
 # TTYs (without /dev/) to monitor for activity while in console mode.
 # Default is ""
-ConsoleTTYs=tty2,tty3,tty4,tty5,tty6
+ConsoleTTYs=tty1,tty2,tty3,tty4,tty5,tty6
 # Where KDM should store its PID (do not store if empty).
 # Default is ""
 PidFile=/var/run/kdm/kdm.pid
