@@ -396,7 +396,7 @@ EchoPasswd=true
 UseBackground=true
 # The configuration file to be used by krootimage.
 # Default is "/usr/share/config/kdm/backgroundrc"
-BackgroundCfg=/etc/kde/kdm/backgroundrc
+BackgroundCfg=/var/lib/kdm/backgroundrc
 # Hold the X-server grabbed the whole time the greeter is visible. This
 # may be more secure, but it will disable any background and other
 # X-clients started from the Setup script.
