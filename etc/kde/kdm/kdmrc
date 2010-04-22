@@ -283,7 +283,7 @@ ClientLogFile=.xsession-errors-%d
 [X-*-Greeter]
 # Widget style of the greeter. "" means the built-in default which currently
 # is "Plastik".  Default is ""
-#GUIStyle=Bluecurve
+GUIStyle=Oxygen
 # Widget color scheme of the greeter. "" means the built-in default which
 # currently is yellowish grey with some light blue and yellow elements.
 # Default is ""
@@ -440,7 +440,7 @@ UseTheme=true
 # file. Default is "/usr/share/kde4/apps/kdm/themes/circles"
 Theme=/usr/share/kde4/apps/kdm/themes/Goddard
 # Set the widget color scheme 
-#ColorScheme=ObsidianCoast
+ColorScheme=Oxygen
 
 # Core config for local displays
 [X-:*-Core]
