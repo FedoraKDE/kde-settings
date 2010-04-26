@@ -117,7 +117,7 @@ Enable=false
 #KeyFile=/usr/share/config/kdm/kdmkeys
 # XDMCP access control file in the usual XDM-Xaccess format.
 # Default is "/usr/share/config/kdm/Xaccess"
-Xaccess=/etc/X11/xdm/Xaccess
+Xaccess=/etc/kde/kdm/Xaccess
 # Number of seconds to wait for display to respond after the user has
 # selected a host from the chooser.
 # Default is 15
@@ -134,7 +134,7 @@ Xaccess=/etc/X11/xdm/Xaccess
 # DirectQuery or BroadcastQuery requests.
 # If empty, no program is invoked and "Willing to manage" is sent.
 # Default is ""
-Willing=/etc/X11/xdm/Xwilling
+Willing=/etc/kde/kdm/Xwilling
 
 [Shutdown]
 # The command (subject to word splitting) to run to halt the system.
@@ -199,7 +199,7 @@ BootManager=None
 # The KDE frontend does not use this file, so you do not need it unless you
 # use another background generator than krootimage.
 # Default is ""
-Resources=/etc/X11/xdm/Xresources
+Resources=/etc/kde/kdm/Xresources
 # The xrdb program to use to read the above specified recources.
 # Subject to word splitting.
 # Default is "/usr/X11R6/bin/xrdb" or "/usr/bin/xrdb"
@@ -207,7 +207,7 @@ Resources=/etc/X11/xdm/Xresources
 # A program to run before the greeter is shown. Can be used to start an
 # xconsole or an alternative background generator. Subject to word splitting.
 # Default is ""
-Setup=/etc/X11/xdm/Xsetup_0
+Setup=/etc/kde/kdm/Xsetup
 # A program to run before a user session starts. Subject to word splitting.
 # Default is ""
 #Startup=
