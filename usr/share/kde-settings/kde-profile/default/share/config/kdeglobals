@@ -16,7 +16,8 @@ XftAntialias=true
 activeFont=Sans Serif,9,-1,5,50,0,0,0,0,0
 
 [Icons]
-Theme=Fedora-KDE
+# See http://bugzilla.redhat.com/615621  (Inherits=oxygen gone bad)
+#Theme=Fedora-KDE
 
 [KSpell]
 KSpell_Client=4
