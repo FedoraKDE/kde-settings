@@ -1,5 +1,5 @@
 NAME=kde-settings
-VERSION=4.4-18
+VERSION=4.4-19
 SVNTAG="${NAME}-${VERSION}"
 
 tag:
