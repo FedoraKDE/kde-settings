@@ -340,7 +340,7 @@ AntiAliasing=true
 #UserCompletion=true
 # Enable user list (names along with images) in the greeter.
 # Default is true
-UserList=true
+UserList=false
 # Allow users to set their own user images.
 # If UserList is enabled, this specifies where kdm gets the images from: 
 # AdminOnly (default): from <FaceDir>/$USER.face[.icon]
