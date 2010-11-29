@@ -1,0 +1,17 @@
+[Compositing]
+Enabled=false
+
+[Style]
+PluginLib=kwin3_oxygen
+ShowToolTips=true
+
+[Windows]
+AutoRaise=off
+AutoRaiseInterval=0
+BorderSnapZone=10
+ClickRaise=on
+FocusPolicy=ClickToFocus
+MoveMode=Opaque
+ResizeMode=Opaque
+WindowSnapZone=10
+WindowsPlacement=Smart

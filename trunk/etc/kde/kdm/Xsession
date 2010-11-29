@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for XSESSION in /etc/X11/xinit/Xsession /etc/X11/xdm/Xsession ; do
+  test -x $XSESSION && exec $XSESSION ${1+"$@"}
+done
+
+echo "/etc/X11/xinit/Xsession and /etc/X11/xdm/Xsession not found."
+exit 1

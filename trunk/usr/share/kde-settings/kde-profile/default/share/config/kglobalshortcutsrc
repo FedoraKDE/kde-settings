@@ -1,0 +1,12 @@
+# Updated, but these don't seem to get used(?), a local 
+# ~/.kde/share/config/kglobalshortcutsrc always gets created, and overrides
+# values set here.  -- Rex
+[kwin]
+Switch One Desktop Down=Ctrl+Alt+Down,none,Switch One Desktop Down
+Switch One Desktop Up=Ctrl+Alt+Up,none,Switch One Desktop Up
+Switch One Desktop to the Left=Ctrl+Alt+Left,none,Switch One Desktop to the Left
+Switch One Desktop to the Right=Ctrl+Alt+Right,none,Switch One Desktop to the Right
+
+[khotkeys]
+_k_friendly_name=
+{9ce26e1e-1a7f-448d-8cdb-db30adab9960}=Print,none,KSnapshot

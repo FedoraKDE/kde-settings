@@ -1,0 +1,8 @@
+[Directories]
+kioskAdmin=root:
+profileDirsPrefix=/usr/share/kde-settings/kde-profile/
+## a non-emtpy userProfileMapFile induces errors in kde4 apps atm
+#userProfileMapFile=/etc/kde-user-profile
+
+[Directories-default]
+prefixes=/usr/share/kde-settings/kde-profile/default/
