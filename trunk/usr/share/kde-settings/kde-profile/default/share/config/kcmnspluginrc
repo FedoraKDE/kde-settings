@@ -1,3 +1,0 @@
-[Misc]
-scanPaths=$HOME/.mozilla/plugins,/usr/lib64/mozilla/plugins,/usr/lib/mozilla/plugins,/usr/lib64/mozilla/plugins-wrapped,/usr/lib/mozilla/plugins-wrapped
-useArtsdsp=true
