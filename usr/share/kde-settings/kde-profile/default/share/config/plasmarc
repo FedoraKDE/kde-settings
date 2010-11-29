@@ -1,2 +1,5 @@
 [Theme]
-name[$d]
+name=Laughlin
+
+[Theme-plasma-netbook]
+name=Laughlin-netbook
