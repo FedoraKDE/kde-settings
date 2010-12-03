@@ -454,7 +454,7 @@ ServerTimeout=30
 #ServerCmd=/usr/X11R6/bin/X
 # Additional arguments for the X-servers for local sessions.
 # This string is subject to word splitting. Default is ""
-ServerArgsLocal=-nr -nolisten tcp
+ServerArgsLocal=-background none -nolisten tcp
 # Additional arguments for the X-servers for remote sessions.
 # This string is subject to word splitting. Default is ""
 #ServerArgsRemote=
