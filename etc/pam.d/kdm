@@ -3,6 +3,7 @@ auth     [success=done ignore=ignore default=bad] pam_selinux_permit.so
 auth       required    pam_env.so
 auth       substack    system-auth
 auth       optional    pam_gnome_keyring.so
+auth       include     postlogin
 account    required    pam_nologin.so
 account    include     system-auth
 password   include     system-auth
@@ -14,3 +15,4 @@ session    optional    pam_keyinit.so force revoke
 session    required    pam_namespace.so
 session    optional    pam_gnome_keyring.so auto_start
 session    include     system-auth
+session    include     postlogin
