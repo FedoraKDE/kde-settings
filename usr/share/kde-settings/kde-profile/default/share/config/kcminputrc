@@ -1,2 +1,4 @@
+
 [Mouse]
-cursorTheme=default
+# workaround https://bugzilla.redhat.com/show_bug.cgi?id=675509 for now
+cursorTheme=dmz-aa
