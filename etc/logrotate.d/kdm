@@ -1,0 +1,5 @@
+/var/log/kdm.log {
+    weekly
+    notifempty
+    missingok
+}
