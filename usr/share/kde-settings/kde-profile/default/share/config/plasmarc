@@ -1,5 +1,5 @@
-#[Theme]
-#name=Lovelock
+[Theme]
+name=Lovelock
 
-#[Theme-plasma-netbook]
-#name=Lovelock-netbook
+[Theme-plasma-netbook]
+name=Lovelock-netbook
