@@ -1,6 +1,6 @@
 
-include "/usr/share/themes/QtCurve/gtk-2.0/gtkrc"
+include "/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc"
 include "/etc/gtk-2.0/gtkrc"
 
-gtk-theme-name="QtCurve"
+gtk-theme-name="oxygen-gtk"
 
