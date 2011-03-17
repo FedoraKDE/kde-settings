@@ -4,31 +4,5 @@ Name=Web Browsing
 RootItem=View0
 View0_ServiceName=khtml
 View0_ServiceType=text/html
-View0_URL=http://www.fedoraproject.org/
+View0_URL=http://start.fedoraproject.org/
 Width=80%
-XMLUIFile=konq-webbrowsing.rc
-
-[Profile][Toolbar bookmarkToolBar]
-IconSize=16
-Index=3
-ToolButtonStyle=TextBesideIcon
-
-[Profile][Toolbar extraToolBar]
-Index=1
-ToolButtonStyle=TextUnderIcon
-
-[Profile][Toolbar htmlToolBar]
-Index=4
-ToolButtonStyle=IconOnly
-
-[Profile][Toolbar locationToolBar]
-Index=2
-ToolButtonStyle=IconOnly
-
-[Profile][Toolbar mainToolBar]
-Index=0
-
-[Profile][Toolbar speechToolbar]
-Hidden=true
-Index=5
-ToolButtonStyle=TextUnderIcon
