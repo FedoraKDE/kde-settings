@@ -1,0 +1,2 @@
+%__plasma4_provides	%{_rpmconfigdir}/plasma4.prov
+%__plasma4_path	^%{_datadir}/kde4/services/.*\\.desktop$

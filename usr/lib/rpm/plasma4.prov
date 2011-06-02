@@ -5,21 +5,17 @@
 #
 # Transform X-KDE-ServiceTypes data into RPM provides
 #
-# Author: Rex Dieter <rdieter@fedoraproject.org>
+# Authors: Rex Dieter <rdieter@fedoraproject.org>
+#          Kevin Kofler <kkofler@fedoraproject.org>
 # based on desktop-file.prov by Richard Hughes
 #
-# v0.2
+# v0.3
 #
-
-KDE4_SERVICES_DIR=$(kde4-config --install services)
-#KDE4_SERVICES_DIR=/usr/share/kde4/services
 
 OLD_IFS="$IFS"
 while read instfile ; do
   case "$instfile" in
     *.desktop)
-    if [ -n "$(echo $instfile | grep $KDE4_SERVICES_DIR 2> /dev/null)" ]; then
-    
     kde_servicetypes=`cat $instfile | grep X-KDE-ServiceTypes= | cut -d'=' -f2`
     IFS=','
     for servicetype in $kde_servicetypes ; do
@@ -48,8 +44,6 @@ while read instfile ; do
           ;;
       esac
     done
-    fi
   esac
 done
 IFS=$OLD_IFS
-
