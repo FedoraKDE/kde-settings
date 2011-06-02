@@ -1,0 +1,55 @@
+#!/bin/sh
+#
+# Script to install in:
+# /usr/lib/rpm/redhat/find-provides.d
+#
+# Transform X-KDE-ServiceTypes data into RPM provides
+#
+# Author: Rex Dieter <rdieter@fedoraproject.org>
+# based on desktop-file.prov by Richard Hughes
+#
+# v0.2
+#
+
+KDE4_SERVICES_DIR=$(kde4-config --install services)
+#KDE4_SERVICES_DIR=/usr/share/kde4/services
+
+OLD_IFS="$IFS"
+while read instfile ; do
+  case "$instfile" in
+    *.desktop)
+    if [ -n "$(echo $instfile | grep $KDE4_SERVICES_DIR 2> /dev/null)" ]; then
+    
+    kde_servicetypes=`cat $instfile | grep X-KDE-ServiceTypes= | cut -d'=' -f2`
+    IFS=','
+    for servicetype in $kde_servicetypes ; do
+      type=
+      name=
+      version=
+      case "$servicetype" in
+        Plasma/*)
+          service=plasma
+          type=`echo $servicetype | cut -d'/' -f2 | tr '[:upper:]' '[:lower:]'`
+          name=`cat $instfile | grep X-KDE-PluginInfo-Name= | cut -d'=' -f2`
+          # not all scriptengines set -Name, but do use X-Plasma-API
+          if [ -z "$name" ]; then
+            name=`cat $instfile | grep X-Plasma-API= | cut -d'=' -f2`
+          fi
+          # extra/paranoid sanity check
+          if [ -n "$service" -a -n "$type" -a -n "$name" ]; then
+            version=`cat $instfile | grep X-KDE-PluginInfo-Version= | cut -d'=' -f2`
+            # the kde4-service(foo-bar-baz) syntax here is probably worth some bikeshedding
+            if [ -z "$version" ]; then
+              echo 'kde4-service('$service'-'$type'-'$name')'
+            else 
+              echo 'kde4-service('$service'-'$type'-'$name') = '$version
+            fi
+          fi
+          ;;
+      esac
+    done
+    fi
+  esac
+done
+IFS=$OLD_IFS
+
