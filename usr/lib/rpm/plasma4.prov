@@ -24,7 +24,6 @@ while read instfile ; do
       version=
       case "$servicetype" in
         Plasma/*)
-          service=plasma
           type=`echo $servicetype | cut -d'/' -f2 | tr '[:upper:]' '[:lower:]'`
           name=`cat $instfile | grep X-KDE-PluginInfo-Name= | cut -d'=' -f2`
           # not all scriptengines set -Name, but do use X-Plasma-API
@@ -32,13 +31,13 @@ while read instfile ; do
             name=`cat $instfile | grep X-Plasma-API= | cut -d'=' -f2`
           fi
           # extra/paranoid sanity check
-          if [ -n "$service" -a -n "$type" -a -n "$name" ]; then
+          if [ -n "$type" -a -n "$name" ]; then
             version=`cat $instfile | grep X-KDE-PluginInfo-Version= | cut -d'=' -f2`
-            # the kde4-service(foo-bar-baz) syntax here is probably worth some bikeshedding
+            # the plasma4(type-name) syntax here is probably worth some bikeshedding
             if [ -z "$version" ]; then
-              echo 'kde4-service('$service'-'$type'-'$name')'
+              echo 'plasma4('$type'-'$name')'
             else 
-              echo 'kde4-service('$service'-'$type'-'$name') = '$version
+              echo 'plasma4('$type'-'$name') = '$version
             fi
           fi
           ;;
