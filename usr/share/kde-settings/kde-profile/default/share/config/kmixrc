@@ -6,4 +6,4 @@ Labels=true
 Menubar=true
 TrayVolumeControl=true
 Visible=false
-startkdeRestore=true
+startkdeRestore=false
