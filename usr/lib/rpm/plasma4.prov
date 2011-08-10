@@ -33,7 +33,6 @@ while read instfile ; do
           # extra/paranoid sanity check
           if [ -n "$type" -a -n "$name" ]; then
             version=`cat $instfile | grep ^X-KDE-PluginInfo-Version= | cut -d'=' -f2`
-            # the plasma4(type-name) syntax here is probably worth some bikeshedding
             if [ -z "$version" ]; then
               echo 'plasma4('$type'-'$name')'
             else 
