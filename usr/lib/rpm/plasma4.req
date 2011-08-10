@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+# Script to install in:
+# /usr/lib/rpm
+#
+# Transform X-Plasma-{API,RequiredDataEngines} data into RPM requires
+# This should use the same metadata as https://git.reviewboard.kde.org/r/102291/
+#
+# Authors: Kevin Kofler <kkofler@fedoraproject.org>
+# based on desktop-file.prov by Richard Hughes, plasma4.prov by Rex Dieter & me
+#
+# v0.1
+#
+
+OLD_IFS="$IFS"
+while read instfile ; do
+  case "$instfile" in
+    *.desktop)
+
+    # check for script engine dependencies
+    scriptengine=`cat $instfile | grep ^X-Plasma-API= | cut -d'=' -f2`
+    if [ -n "$scriptengine" ]; then
+      # check if this IS the script engine
+      kde_servicetypes=`cat $instfile | grep ^X-KDE-ServiceTypes= | cut -d'=' -f2`
+      IFS=','
+      for servicetype in $kde_servicetypes ; do
+        if [ "$servicetype" = Plasma/ScriptEngine ]; then
+          # this IS the script engine, so it doesn't require it
+          scriptengine=
+        fi
+      done
+    fi
+    if [ -n "$scriptengine" ]; then
+      echo 'plasma4(scriptengine-'$scriptengine')'
+    fi
+
+    # check for data engine dependencies
+    dataengines=`cat $instfile | grep ^X-Plasma-RequiredDataEngines= | cut -d'=' -f2`
+    if [ -n "$dataengines" ]; then
+      IFS=';'
+      for dataengine in $dataengines ; do
+        if [ -n "$dataengine" ]; then
+          echo 'plasma4(dataengine-'$dataengine')'
+        fi
+      done
+    fi
+  esac
+done
+IFS=$OLD_IFS
