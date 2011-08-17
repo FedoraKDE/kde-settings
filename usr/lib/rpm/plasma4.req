@@ -9,7 +9,7 @@
 # Authors: Kevin Kofler <kkofler@fedoraproject.org>
 # based on desktop-file.prov by Richard Hughes, plasma4.prov by Rex Dieter & me
 #
-# v0.1
+# v0.2
 #
 
 OLD_IFS="$IFS"
@@ -37,7 +37,7 @@ while read instfile ; do
     # check for data engine dependencies
     dataengines=`cat $instfile | grep ^X-Plasma-RequiredDataEngines= | cut -d'=' -f2`
     if [ -n "$dataengines" ]; then
-      IFS=';'
+      IFS=','
       for dataengine in $dataengines ; do
         if [ -n "$dataengine" ]; then
           echo 'plasma4(dataengine-'$dataengine')'
