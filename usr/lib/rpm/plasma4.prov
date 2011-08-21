@@ -9,7 +9,7 @@
 #          Kevin Kofler <kkofler@fedoraproject.org>
 # based on desktop-file.prov by Richard Hughes
 #
-# v0.4
+# v0.5
 #
 
 OLD_IFS="$IFS"
@@ -17,6 +17,9 @@ while read instfile ; do
   case "$instfile" in
     *.desktop)
     kde_servicetypes=`cat $instfile | grep ^X-KDE-ServiceTypes= | cut -d'=' -f2`
+    if [ -z "$kde_servicetypes" ]; then
+      kde_servicetypes=`cat $instfile | grep ^ServiceTypes= | cut -d'=' -f2`
+    fi
     IFS=','
     for servicetype in $kde_servicetypes ; do
       type=

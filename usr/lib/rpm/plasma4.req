@@ -9,7 +9,7 @@
 # Authors: Kevin Kofler <kkofler@fedoraproject.org>
 # based on desktop-file.prov by Richard Hughes, plasma4.prov by Rex Dieter & me
 #
-# v0.2
+# v0.3
 #
 
 OLD_IFS="$IFS"
@@ -22,6 +22,9 @@ while read instfile ; do
     if [ -n "$scriptengine" ]; then
       # check if this IS the script engine
       kde_servicetypes=`cat $instfile | grep ^X-KDE-ServiceTypes= | cut -d'=' -f2`
+      if [ -z "$kde_servicetypes" ]; then
+        kde_servicetypes=`cat $instfile | grep ^ServiceTypes= | cut -d'=' -f2`
+      fi
       IFS=','
       for servicetype in $kde_servicetypes ; do
         if [ "$servicetype" = Plasma/ScriptEngine ]; then
