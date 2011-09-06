@@ -360,11 +360,15 @@ ShowUsers=NotHidden
 # Default is ""
 HiddenUsers=root
 # Special case of HiddenUsers: users with a non-zero UID less than this number
-# will not be shown as well.
+# will not be shown as well.  Setting this to -1 means that the limit should be
+# determined in a platform-specific way (by reading /etc/login.defs or using a
+# compiled-in default).
 # Default is 0
-MinShowUID=500
+MinShowUID=-1
 # Complement to MinShowUID: users with a UID greater than this number will
-# not be shown as well. Default is 65535
+# not be shown as well.  Unlike MinShowUID, the special value -1 is not
+# supported.
+# Default is 65535
 MaxShowUID=65530
 # If false, the users are listed in the order they appear in /etc/passwd.
 # If true, they are sorted alphabetically.
