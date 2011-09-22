@@ -28,4 +28,4 @@ snapshot:
 	echo "The archive is in ${NAME}-${VERSION}-snapshot.tar.xz"
 
 upload:
-	scp -p ${NAME}-${VERSION}.tar.xz "$(shell LANG=en_US.UTF-8 svn info | grep '^URL: ' | sed -e 's/^[^:]*: //' -e 's!^[^:]*://!!' -e 's!svn.fedorahosted.org/.*$!!')fedorahosted.org:kde-settings"
+	scp -p ${NAME}-${VERSION}.tar.xz "$(shell LANG=en_US.UTF-8 svn info | grep '^URL: ' | sed -e 's/^[^:]*: //' -e 's,^[^:]*://,,' -e 's,svn.fedorahosted.org/.*$,,')fedorahosted.org:kde-settings"
