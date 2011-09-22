@@ -10,21 +10,21 @@ tag:
 	-m "tagged release $(VERSION)"
 
 archive:
-	TMPSUBDIR=`mktemp -d`
-	cd "${TMPSUBDIR}"; svn export --force $(shell LANG=en_US.UTF-8 svn info | grep '^Repository Root: ' | sed -e 's/^[^:]*: //')/tags/$(SVNTAG) "${TMPSUBDIR}"/${NAME}-${VERSION}
-	rm -f "${TMPSUBDIR}"/${NAME}-${VERSION}/Makefile
-	cd "${TMPSUBDIR}"; tar cvJf ${NAME}-${VERSION}.tar.xz ${NAME}-${VERSION}
-	mv "${TMPSUBDIR}"/${NAME}-${VERSION}.tar.xz .
-	rm -rf "${TMPSUBDIR}"
+	TMPSUBDIR=$(shell mktemp -d)
+	cd "$(TMPSUBDIR)"; svn export --force $(shell LANG=en_US.UTF-8 svn info | grep '^Repository Root: ' | sed -e 's/^[^:]*: //')/tags/$(SVNTAG) "$(TMPSUBDIR)"/${NAME}-${VERSION}
+	rm -f "$(TMPSUBDIR)"/${NAME}-${VERSION}/Makefile
+	cd "$(TMPSUBDIR)"; tar cvJf ${NAME}-${VERSION}.tar.xz ${NAME}-${VERSION}
+	mv "$(TMPSUBDIR)"/${NAME}-${VERSION}.tar.xz .
+	rm -rf "$(TMPSUBDIR)"
 	echo "The archive is in ${NAME}-${VERSION}.tar.xz"
 
 snapshot:
-	TMPSUBDIR=`mktemp -d`
-	cd "${TMPSUBDIR}"; svn export --force $(shell LANG=en_US.UTF-8 svn info | grep '^Repository Root: ' | sed -e 's/^[^:]*: //')/trunk/$(NAME) "${TMPSUBDIR}"/${NAME}-${VERSION}
-	rm -f "${TMPSUBDIR}"/${NAME}-${VERSION}/Makefile
-	cd "${TMPSUBDIR}"; tar cvJf ${NAME}-${VERSION}-snapshot.tar.xz ${NAME}-${VERSION}
-	mv "${TMPSUBDIR}"/${NAME}-${VERSION}-snapshot.tar.xz .
-	rm -rf "${TMPSUBDIR}"
+	TMPSUBDIR=$(shell mktemp -d)
+	cd "$(TMPSUBDIR)"; svn export --force $(shell LANG=en_US.UTF-8 svn info | grep '^Repository Root: ' | sed -e 's/^[^:]*: //')/trunk/$(NAME) "$(TMPSUBDIR)"/${NAME}-${VERSION}
+	rm -f "$(TMPSUBDIR)"/${NAME}-${VERSION}/Makefile
+	cd "$(TMPSUBDIR)"; tar cvJf ${NAME}-${VERSION}-snapshot.tar.xz ${NAME}-${VERSION}
+	mv "$(TMPSUBDIR)"/${NAME}-${VERSION}-snapshot.tar.xz .
+	rm -rf "$(TMPSUBDIR)"
 	echo "The archive is in ${NAME}-${VERSION}-snapshot.tar.xz"
 
 upload:
