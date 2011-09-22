@@ -2,6 +2,8 @@ NAME=kde-settings
 VERSION=4.7-4
 SVNTAG="${NAME}-${VERSION}"
 
+release: tag archive upload
+
 tag:
 	svn copy "$(shell svn info | grep ^URL: | sed -e 's/^[^:]*: //')" \
 	"$(shell svn info | grep ^Root: | sed -e 's/^[^:]*: //')/tags/$(SVNTAG)" \
@@ -27,6 +29,3 @@ snapshot:
 
 upload:
 	scp -p ${NAME}-${VERSION}.tar.xz "$(shell svn info | grep ^URL: | sed -e 's/^[^:]*: //' -e 's!^[^:]*://!!' -e 's!svn.fedorahosted.org/.*$!!')fedorahosted.org:kde-settings"
-
-release: tag archive upload
-
