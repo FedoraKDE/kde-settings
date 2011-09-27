@@ -9,7 +9,7 @@
 #          Kevin Kofler <kkofler@fedoraproject.org>
 # based on desktop-file.prov by Richard Hughes
 #
-# v0.5
+# v0.6
 #
 
 OLD_IFS="$IFS"
@@ -28,10 +28,12 @@ while read instfile ; do
       case "$servicetype" in
         Plasma/*)
           type=`echo $servicetype | cut -d'/' -f2 | tr '[:upper:]' '[:lower:]'`
-          name=`cat $instfile | grep ^X-KDE-PluginInfo-Name= | cut -d'=' -f2`
-          # not all scriptengines set -Name, but do use X-Plasma-API
-          if [ -z "$name" ]; then
+          if [ "$type" = scriptengine ]; then
+            # script engines use X-Plasma-API as the identifier
+            # the X-KDE-PluginInfo-Name can be unset or set to some nonsense
             name=`cat $instfile | grep ^X-Plasma-API= | cut -d'=' -f2`
+          else
+            name=`cat $instfile | grep ^X-KDE-PluginInfo-Name= | cut -d'=' -f2`
           fi
           # extra/paranoid sanity check
           if [ -n "$type" -a -n "$name" ]; then
