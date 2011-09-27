@@ -1,30 +1,31 @@
 NAME=kde-settings
 VERSION=4.6-11
-SVNTAG="${NAME}-${VERSION}"
-
-tag:
-	svn copy "$(shell svn info | grep URL: | sed -e 's/[^:]*: //')" \
-	"$(shell svn info | grep Root: | sed -e 's/[^:]*: //')/tags/$(SVNTAG)" \
-	-m "tagged release $(VERSION)"
-                                          
-archive:
-	rm -rf /tmp/${NAME}
-	cd /tmp; svn export --force $(shell svn info | grep Root: | sed -e 's/[^:]*: //')/tags/$(SVNTAG) /tmp/${NAME}-${VERSION}
-	cd /tmp; tar cvjf ${NAME}-${VERSION}.tar.bz2 ${NAME}-${VERSION}
-	mv /tmp/${NAME}-${VERSION}.tar.bz2 .
-	rm -rf /tmp/${NAME}
-	echo "The archive is in ${NAME}-${VERSION}.tar.bz2"
-
-snapshot:
-	rm -rf /tmp/${NAME}
-	cd /tmp; svn export --force $(shell svn info | grep Root: | sed -e 's/[^:]*: //')/trunk/$(NAME) /tmp/${NAME}-${VERSION}
-	cd /tmp; tar cvjf ${NAME}-${VERSION}-snapshot.tar.bz2 ${NAME}-${VERSION}
-	mv /tmp/${NAME}-${VERSION}-snapshot.tar.bz2 .
-	rm -rf /tmp/${NAME}
-	echo "The archive is in ${NAME}-${VERSION}-snapshot.tar.bz2"
-
-upload:
-	scp -p ${NAME}-${VERSION}.tar.bz2 fedorahosted.org:kde-settings
+SVNTAG=${NAME}-${VERSION}
 
 release: tag archive upload
-        
+
+tag:
+	svn copy "$(shell LANG=en_US.UTF-8 svn info | grep '^URL: ' | sed -e 's/^[^:]*: //')" \
+	"$(shell LANG=en_US.UTF-8 svn info | grep '^Repository Root: ' | sed -e 's/^[^:]*: //')/tags/$(SVNTAG)" \
+	-m "tagged release $(VERSION)"
+
+archive:
+	$(eval $@_TMPDIR:=$(shell mktemp -d))
+	cd "$($@_TMPDIR)"; svn export --force $(shell LANG=en_US.UTF-8 svn info | grep '^Repository Root: ' | sed -e 's/^[^:]*: //')/tags/$(SVNTAG) "$($@_TMPDIR)"/${NAME}-${VERSION}
+	rm -f "$($@_TMPDIR)"/${NAME}-${VERSION}/Makefile
+	cd "$($@_TMPDIR)"; tar cvJf ${NAME}-${VERSION}.tar.xz ${NAME}-${VERSION}
+	mv "$($@_TMPDIR)"/${NAME}-${VERSION}.tar.xz .
+	rm -rf "$($@_TMPDIR)"
+	echo "The archive is in ${NAME}-${VERSION}.tar.xz"
+
+snapshot:
+	$(eval $@_TMPDIR:=$(shell mktemp -d))
+	cd "$($@_TMPDIR)"; svn export --force $(shell LANG=en_US.UTF-8 svn info | grep '^Repository Root: ' | sed -e 's/^[^:]*: //')/trunk/$(NAME) "$($@_TMPDIR)"/${NAME}-${VERSION}
+	rm -f "$($@_TMPDIR)"/${NAME}-${VERSION}/Makefile
+	cd "$($@_TMPDIR)"; tar cvJf ${NAME}-${VERSION}-snapshot.tar.xz ${NAME}-${VERSION}
+	mv "$($@_TMPDIR)"/${NAME}-${VERSION}-snapshot.tar.xz .
+	rm -rf "$($@_TMPDIR)"
+	echo "The archive is in ${NAME}-${VERSION}-snapshot.tar.xz"
+
+upload:
+	scp -p ${NAME}-${VERSION}.tar.xz "$(shell LANG=en_US.UTF-8 svn info | grep '^URL: ' | sed -e 's/^[^:]*: //' -e 's!^[^:]*://!!' -e 's!svn.fedorahosted.org/.*$$!!')fedorahosted.org:kde-settings"
