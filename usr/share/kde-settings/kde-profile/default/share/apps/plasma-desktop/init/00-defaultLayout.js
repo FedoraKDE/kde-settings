@@ -1,5 +1,13 @@
 loadTemplate("org.kde.plasma-desktop.defaultPanel")
 
+function noDisplayEvents(widget, containment)
+{
+    widget.writeConfig("displayEvents", false);
+}
+
+var findWidgetsTemplate = loadTemplate("org.kde.plasma-desktop.findWidgets");
+findWidgetsTemplate.findWidgets("digital-clock", noDisplayEvents);
+
 function widgetExists(name)
 {
     var widgets = knownWidgetTypes;
