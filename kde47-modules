@@ -11,7 +11,7 @@ kcolorchooser
 kdeaccessibility
 kdeadmin
 kdeartwork
-kdebase
+kdebase kde-baseapps
 kdegames
 kdegraphics-strigi-analyzer
 kdegraphics-thumbnailers
@@ -22,23 +22,21 @@ kdepim
 kdepimlibs
 kdepim-runtime
 kdeplasma-addons
-kdebase-runtime
+kdebase-runtime kde-runtime
 kdesdk
 kdetoys
 kdeutils
-kdebase-workspace
+kdebase-workspace kde-workspace
 kde-wallpapers
 kgamma
 kgeography
 khangman
 kig
-kimono
 kiten
 klettres
 kmplot
 kolourpaint
 konsole
-korundum
 kross-interpreters
 kruler
 ksaneplugin
@@ -54,11 +52,9 @@ libkipi
 libksane
 marble
 okular
-oxygen-icons
+oxygen-icon-theme oxygen-icons
 parley
-perlkde
-perlqt
-pykde4
+PyKDE4 pykde4
 rocs
 smokegen
 smokekde

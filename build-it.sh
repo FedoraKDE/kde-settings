@@ -1,6 +1,7 @@
 #!/bin/sh
 
 pkg=$1
+src=${2:-${pkg}}
 kde=4.7.90
 
 set -x
@@ -20,9 +21,9 @@ fi
 
 ## update sources
 # maybe grep sources instead?  -- rex
-if [ ! -f ${pkg}-${kde}.tar.bz2 -a -f  "../kde4/${pkg}-${kde}.tar.bz2" ]; then
-cp -alf "../kde4/${pkg}-${kde}.tar.bz2" .
-fedpkg new-sources ${pkg}-${kde}.tar.bz2
+if [ ! -f ${src}-${kde}.tar.bz2 -a -f  "../kde4/${src}-${kde}.tar.bz2" ]; then
+cp -alf "../kde4/${src}-${kde}.tar.bz2" .
+fedpkg new-sources ${src}-${kde}.tar.bz2
 fi
 
 ## update spec

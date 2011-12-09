@@ -1,18 +1,29 @@
+analitza
+ark
 blinken
 cantor
+filelight
 gwenview
+jovie
+kaccessible
+kactivities
 kalgebra
 kalzium
 kamera
 kanagram
 kate
 kbruch
+kcalc
+kcharselect
 kcolorchooser
-kdeaccessibility
+kdeaccessibility meta
 kdeadmin
 kdeartwork
-kdebase
+kdebase kde-baseapps
+kdebase-runtime kde-runtime
+kdebase-workspace kde-workspace
 kdegames
+kdegraphics meta
 kdegraphics-strigi-analyzer
 kdegraphics-thumbnailers
 kdelibs
@@ -22,30 +33,36 @@ kdepim
 kdepimlibs
 kdepim-runtime
 kdeplasma-addons
-kdebase-runtime
+kde-printer-applet printer-applet
 kdesdk
 kdetoys
-kdeutils
-kdebase-workspace
+kdeutils meta
 kde-wallpapers
+kdf
+kfloppy
 kgamma
 kgeography
+kgpg
 khangman
 kig
-kimono
 kiten
 klettres
+kmag
+kmousetool
+kmouth
 kmplot
 kolourpaint
 konsole
-korundum
+kremotecontrol
 kross-interpreters
 kruler
 ksaneplugin
 ksnapshot
 kstars
+ktimer
 ktouch
 kturtle
+kwallet
 kwordquiz
 libkdcraw
 libkdeedu
@@ -54,14 +71,14 @@ libkipi
 libksane
 marble
 okular
-oxygen-icons
+oxygen-icon-theme oxygen-icons
 parley
-perlkde
-perlqt
-pykde4
+PyKDE4 pykde4
 rocs
 smokegen
 smokekde
 smokeqt
 step
+superkaramba
 svgpart
+sweeper
