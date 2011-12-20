@@ -22,6 +22,7 @@ kdeartwork
 kdebase kde-baseapps
 kdebase-runtime kde-runtime
 kdebase-workspace kde-workspace
+kdebindings meta
 kdegames
 kdegraphics meta
 kdegraphics-strigi-analyzer
@@ -45,6 +46,7 @@ kgeography
 kgpg
 khangman
 kig
+kimono
 kiten
 klettres
 kmag
@@ -53,6 +55,7 @@ kmouth
 kmplot
 kolourpaint
 konsole
+korundum
 kremotecontrol
 kross-interpreters
 kruler
@@ -74,7 +77,9 @@ okular
 oxygen-icon-theme oxygen-icons
 parley
 PyKDE4 pykde4
+qyoto
 rocs
+ruby-qt qtruby
 smokegen
 smokekde
 smokeqt
