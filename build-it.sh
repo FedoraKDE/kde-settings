@@ -16,7 +16,10 @@ branch=master
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.7.90
+kde=4.7.95
+
+# true if fedpkg prep should be executed before pushing
+use_prep="true"
 
 # copious debug output for now
 set -x
@@ -50,6 +53,20 @@ fedpkg new-sources ${src}-${kde}.tar.bz2
 fi
 
 ## update spec
+# check if needed
+old_version=$(grep "Version:" ${pkg}.spec | awk '{print $2}')
+
+rpmdev-vercmp $kde $old_version
+case $? in
+    0)  printf "Package has been already updated\n"
+        exit 0
+        ;;
+    12) printf "Package has newer version that you are trying to update to\n"
+        exit 1
+        ;;
+esac
+
+# update
 sed -i \
   -e "s|Version:.*|Version: ${kde}|" \
   -e 's|Release:.*|Release: 0%{?dist}|' \
@@ -57,6 +74,12 @@ sed -i \
 
 rpmdev-bumpspec --comment="${kde}" ${pkg}.spec
 
+fi
+
+# Test prep to see if all patches can be applied successfully
+if [ "$use_prep" == "true" ];
+then
+    fedpkg prep || exit 1
 fi
 
 fedpkg commit --clog -p && \
