@@ -17,11 +17,11 @@ kcalc
 kcharselect
 kcolorchooser
 kdeaccessibility meta
+kde-baseapps
+kde-runtime
+kde-workspace
 kdeadmin
 kdeartwork
-kdebase kde-baseapps
-kdebase-runtime kde-runtime
-kdebase-workspace kde-workspace
 kdebindings meta
 kdegames
 kdegraphics meta
