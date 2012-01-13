@@ -25,6 +25,7 @@ kdebase-workspace kde-workspace
 kdebindings meta
 kdegames
 kdegraphics meta
+kdegraphics-mobipocket
 kdegraphics-strigi-analyzer
 kdegraphics-thumbnailers
 kdelibs
