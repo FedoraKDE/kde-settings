@@ -234,7 +234,7 @@ Session=/etc/kde/kdm/Xsession
 # Where to put the user's X-server authorization file if ~/.Xauthority
 # cannot be created (and ForceUserAuthDir is not true)
 # Default is "/tmp"
-UserAuthDir=/var/run/kdm
+#UserAuthDir=/tmp
 ForceUserAuthDir=true
 # Whether to automatically restart sessions after X-server crashes.
 # Note that enabling this makes circumventing screen lockers other than
