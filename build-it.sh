@@ -16,7 +16,7 @@ branch=master
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.7.97
+kde=4.8.0 
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -54,7 +54,7 @@ fi
 
 ## update spec
 # check if needed
-old_version=$(grep "Version:" ${pkg}.spec | awk '{print $2}')
+old_version=$(grep "^Version:" ${pkg}.spec | awk '{print $2}')
 
 rpmdev-vercmp $kde $old_version
 case $? in
