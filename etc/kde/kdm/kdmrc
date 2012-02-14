@@ -313,7 +313,7 @@ LogoPixmap=/usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png
 # - %m -> the machine (hardware) type
 # - %% -> a single %
 # Default is "Welcome to %s at %n"
-GreetString=Fedora 16 (Verne)
+GreetString=Fedora 17 (Beefy Miracle)
 # The font for the greeter headline.
 # Default is "charter,24,bold"
 GreetFont=Sans,16,-1,5,75,0,0,0,0,0
@@ -442,7 +442,7 @@ ForgingSeed=1108476160
 UseTheme=true
 # The theme to use for the greeter. Can point to either a directory or an XML
 # file. Default is "/usr/share/kde4/apps/kdm/themes/circles"
-Theme=/usr/share/kde4/apps/kdm/themes/Verne
+Theme=/usr/share/kde4/apps/kdm/themes/BeefyMiracle
 # Set the widget color scheme 
 #ColorScheme=ObsidianCoast
 
