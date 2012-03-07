@@ -23,6 +23,7 @@ kde-workspace
 kdeadmin
 kdeartwork
 kdebindings meta
+kdeedu meta
 kdegames
 kdegraphics meta
 kdegraphics-mobipocket
@@ -61,6 +62,7 @@ kremotecontrol
 kross-interpreters
 kruler
 ksaneplugin
+ksecrets
 ksnapshot
 kstars
 ktimer
