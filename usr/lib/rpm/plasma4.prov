@@ -9,7 +9,7 @@
 #          Kevin Kofler <kkofler@fedoraproject.org>
 # based on desktop-file.prov by Richard Hughes
 #
-# v0.6
+# v0.7
 #
 
 OLD_IFS="$IFS"
@@ -33,7 +33,7 @@ while read instfile ; do
             # the X-KDE-PluginInfo-Name can be unset or set to some nonsense
             name=`cat $instfile | grep ^X-Plasma-API= | cut -d'=' -f2`
           else
-            name=`cat $instfile | grep ^X-KDE-PluginInfo-Name= | cut -d'=' -f2`
+            name=`cat $instfile | grep ^X-KDE-PluginInfo-Name= | cut -d'=' -f2 | tr ' ' '_'`
           fi
           # extra/paranoid sanity check
           if [ -n "$type" -a -n "$name" ]; then
