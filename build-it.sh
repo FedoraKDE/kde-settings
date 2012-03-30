@@ -10,8 +10,8 @@ branch=master
 #merge=master
 
 ## koji options
-#koji_opts=--background
-#koji_opts=--target f16-kde
+#koji_opts="--background"
+#koji_opts="--target ${branch}-kde"
 
 # log builds done to this file
 build_log=build-log.txt
@@ -32,8 +32,6 @@ else
 fedpkg clone "${pkg}"
 pushd "${pkg}"
 fi
-
-
 
 if [ ! -z "${merge}" ]; then
 
@@ -74,15 +72,15 @@ sed -i \
 
 rpmdev-bumpspec --comment="${kde}" ${pkg}.spec
 
-fi
-
 # Test prep to see if all patches can be applied successfully
 if [ "$use_prep" == "true" ];
 then
     fedpkg prep || exit 1
 fi
 
-fedpkg commit --clog -p && \
+fedpkg commit --clog -p
+fi
+
 fedpkg build --nowait ${koji_opts}
 
 popd
