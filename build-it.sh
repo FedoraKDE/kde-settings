@@ -16,7 +16,7 @@ branch=master
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.8.0 
+kde=4.8.2
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -47,9 +47,9 @@ else
 
 ## update sources
 # maybe grep sources instead?  -- rex
-if [ ! -f ${src}-${kde}.tar.bz2 -a -f  "../kde4/${src}-${kde}.tar.bz2" ]; then
-cp -alf "../kde4/${src}-${kde}.tar.bz2" .
-fedpkg new-sources ${src}-${kde}.tar.bz2
+if [ ! -f ${src}-${kde}.tar.xz -a -f  "../kde4/${src}-${kde}.tar.xz" ]; then
+cp -alf "../kde4/${src}-${kde}.tar.xz" .
+fedpkg new-sources ${src}-${kde}.tar.xz
 fi
 
 ## update spec
