@@ -11,12 +11,14 @@ branch=master
 
 ## koji options
 #koji_opts="--background"
-#koji_opts="--target ${branch}-kde"
+if [ "${branch}" != "master" ]; then
+koji_opts="${koji_opts} --target ${branch}-kde"
+fi
 
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.8.2
+kde=4.8.3
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -89,4 +91,4 @@ echo ${pkg} >> ${build_log}
 
 # stupid requirement @ rex's site, whose IT assumes you're a hacker 
 # for doing > 25 outgoing ssh connects in 5 minutes
-sleep 15
+sleep 5 
