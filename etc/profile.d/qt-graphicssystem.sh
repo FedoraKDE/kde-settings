@@ -4,7 +4,9 @@ if [ -z "${QT_GRAPHICSSYSTEM_CHECKED}" -a -z "${QT_GRAPHICSSYSTEM}" ] ; then
   export QT_GRAPHICSSYSTEM_CHECKED
 
   # workarond cirrus/qt bug, http://bugzilla.redhat.com/810161
-  lspci | grep -qi "VGA compatible controller: Cirrus Logic GD 5446" && QT_GRAPHICSSYSTEM=native
-  export QT_GRAPHICSSYSTEM
+  if ( lspci | grep -qi "VGA compatible controller: Cirrus Logic GD 5446" ) ; then
+    QT_GRAPHICSSYSTEM=native
+    export QT_GRAPHICSSYSTEM
+  fi
 fi
 
