@@ -282,8 +282,8 @@ ClientLogFile=.xsession-errors-%d
 # Greeter config for all displays
 [X-*-Greeter]
 # Widget style of the greeter. "" means the built-in default which currently
-# is "Plastik".  Default is ""
-#GUIStyle=Bluecurve
+# is "Oxygen".  Default is ""
+GUIStyle=Plastique
 # Widget color scheme of the greeter. "" means the built-in default which
 # currently is yellowish grey with some light blue and yellow elements.
 # Default is ""
