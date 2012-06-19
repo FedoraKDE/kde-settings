@@ -61,7 +61,6 @@ kremotecontrol
 kross-interpreters
 kruler
 ksaneplugin
-ksecrets
 ksnapshot
 kstars
 ktimer
@@ -75,8 +74,10 @@ libkexiv2
 libkipi
 libksane
 marble
+nepomuk-core
 okular
 oxygen-icon-theme oxygen-icons
+pairs
 parley
 pykde4
 qyoto
