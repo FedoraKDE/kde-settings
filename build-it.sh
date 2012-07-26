@@ -7,7 +7,7 @@ src=${2:-${pkg}}
 branch=master
 
 ## if defined, merge from this branch rather than editing anything
-#merge=master
+#merge=f17
 
 ## koji options
 #koji_opts="--background"
@@ -18,7 +18,7 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.8.3
+kde=4.9.0
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -91,4 +91,4 @@ echo ${pkg} >> ${build_log}
 
 # stupid requirement @ rex's site, whose IT assumes you're a hacker 
 # for doing > 25 outgoing ssh connects in 5 minutes
-sleep 5 
+#sleep 5 
