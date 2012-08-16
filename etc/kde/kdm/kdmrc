@@ -313,7 +313,7 @@ LogoPixmap=/usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png
 # - %m -> the machine (hardware) type
 # - %% -> a single %
 # Default is "Welcome to %s at %n"
-GreetString=Fedora 17 (Beefy Miracle)
+GreetString=Fedora 18 (Spherical Cow)
 # The font for the greeter headline.
 # Default is "charter,24,bold"
 GreetFont=Sans,16,-1,5,75,0,0,0,0,0
