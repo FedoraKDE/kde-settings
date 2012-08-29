@@ -14,6 +14,6 @@ session    optional    pam_console.so
 session    required    pam_selinux.so open
 session    optional    pam_keyinit.so force revoke
 session    required    pam_namespace.so
--session    optional    pam_gnome_keyring.so auto_start
 session    include     system-auth
+-session    optional    pam_gnome_keyring.so auto_start
 session    include     postlogin
