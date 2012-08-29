@@ -4,7 +4,7 @@ SVNTAG=${NAME}-${VERSION}
 
 release: tag archive upload
 
-tag:
+tag: uncommitted-changes
 	svn copy "$(shell LANG=en_US.UTF-8 svn info | grep '^URL: ' | sed -e 's/^[^:]*: //')" \
 	"$(shell LANG=en_US.UTF-8 svn info | grep '^Repository Root: ' | sed -e 's/^[^:]*: //')/tags/$(SVNTAG)" \
 	-m "tagged release $(VERSION)"
@@ -29,3 +29,7 @@ snapshot:
 
 upload:
 	scp -p ${NAME}-${VERSION}.tar.xz "$(shell LANG=en_US.UTF-8 svn info | grep '^URL: ' | sed -e 's/^[^:]*: //' -e 's!^[^:]*://!!' -e 's!svn.fedorahosted.org/.*$$!!')fedorahosted.org:kde-settings"
+
+uncommitted-changes:
+	@svn status
+	@test -z "$(shell LANG=en_US.UTF-8 svn status)"
