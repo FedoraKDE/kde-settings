@@ -7,7 +7,7 @@ src=${2:-${pkg}}
 branch=master
 
 ## if defined, merge from this branch rather than editing anything
-#merge=f17
+#merge=master
 
 ## koji options
 #koji_opts="--background"
@@ -18,7 +18,7 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.9.0
+kde=4.9.1
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
