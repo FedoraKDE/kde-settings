@@ -1,0 +1,7 @@
+[Plugins]
+# avoids akonadi launch on initial login
+kabccontactsEnabled=false
+org.kde.events_runnerEnabled=false
+# https://bugzilla.redhat.com/559977
+nepomuksearchEnabled=false
+

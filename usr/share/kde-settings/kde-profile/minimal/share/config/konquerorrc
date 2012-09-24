@@ -1,0 +1,26 @@
+[Java/JavaScript Settings]
+EnableJavaScript=true
+EnableJSDebugOutput=false
+EnablePlugins=true
+
+[HTML Settings]
+AutoDelayedActions=true
+AutoLoadImages=true
+ChangeCursor=true
+FormCompletion=true
+HoverLinks=true
+MaxFormCompletionItems=10
+ShowAnimations=Enabled
+UnderlineLinks=true
+MediumFontSize=10
+MinimumFontSize=8
+
+[FMSettings]
+DisplayFileSizeInBytes=false
+ShowFileTips=false
+StandardFont=Sans,10,-1,5,50,0,0,0,0,0
+UnderlineLinks=false
+WordWrapText=true
+
+[UserSettings]
+HomeURL=http://start.fedoraproject.org/

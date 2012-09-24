@@ -1,0 +1,9 @@
+Visible=false
+
+[Global]
+AllowDocking=true
+Labels=true
+Menubar=true
+TrayVolumeControl=true
+Visible=false
+startkdeRestore=false

@@ -1,0 +1,10 @@
+[TipOfDay]
+RunOnStart=false
+
+[Desktop Entry]
+MenuBar=Enabled
+bellmode=1
+defaultfont=Monospace,10,-1,5,50,0,0,0,1,0
+scrollbar=2
+TerminalSizeHint=false
+font=6

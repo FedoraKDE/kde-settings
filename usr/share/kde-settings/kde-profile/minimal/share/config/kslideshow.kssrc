@@ -1,0 +1,6 @@
+[Settings]
+Directory[$e]=$HOME/Pictures
+EffectsEnabled=false
+ShowRandom=true
+SubDirectory=false
+ZoomImages=true

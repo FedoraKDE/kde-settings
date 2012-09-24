@@ -1,0 +1,3 @@
+[Added Associations]
+application/x-bittorrent=kde4-ktorrent.desktop;kde4-kget.desktop;
+application/x-rpm=kde4-apper_installer.desktop;gpk-install-local-file.desktop;

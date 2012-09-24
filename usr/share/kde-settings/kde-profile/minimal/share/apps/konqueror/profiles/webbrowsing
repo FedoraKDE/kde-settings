@@ -1,0 +1,8 @@
+[Profile]
+Height=80%
+Name=Web Browsing
+RootItem=View0
+View0_ServiceName=khtml
+View0_ServiceType=text/html
+View0_URL=http://start.fedoraproject.org/
+Width=80%

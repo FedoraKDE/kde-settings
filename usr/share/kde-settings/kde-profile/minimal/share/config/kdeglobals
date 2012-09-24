@@ -1,0 +1,42 @@
+
+[Development]
+AutoCheckAccelerators=false
+
+[General]
+desktopFont=Sans Serif,10,-1,5,50,0,0,0,0,0
+fixed=Monospace,10,-1,5,50,0,0,0,0,0
+font=Sans Serif,10,-1,5,50,0,0,0,0,0
+menuFont=Sans Serif,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Sans Serif,8,-1,5,50,0,0,0,0,0
+toolBarFont=Sans Serif,10,-1,5,50,0,0,0,0,0
+widgetStyle=plastique
+XftAntialias=true
+
+[WM]
+activeFont=Sans Serif,9,-1,5,50,0,0,0,0,0
+
+[Icons]
+Theme=oxygen
+
+[KSpell]
+KSpell_Client=4
+KSpell_Encoding=11
+
+[K3Spell]
+K3Spell_Client=4
+K3Spell_Encoding=11
+
+[Paths]
+Desktop[$e]=$(xdg-user-dir DESKTOP)
+Documents[$e]=$(xdg-user-dir DOCUMENTS)
+#Trash[$e]=$(xdg-user-dir DESKTOP)/Trash/
+
+[Toolbar style]
+Highlighting=true
+IconText=IconOnly
+TransparentMoving=false
+
+[KDE Action Restrictions][$i]
+
+[KDE-Global GUI Settings]
+GraphicEffectsLevel=0
