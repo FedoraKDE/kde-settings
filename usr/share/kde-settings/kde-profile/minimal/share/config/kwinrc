@@ -1,0 +1,17 @@
+[Style]
+PluginLib=kwin3_plastik
+ShowToolTips=false
+
+[Compositing]
+Enabled=false
+
+[Windows]
+AutoRaise=off
+AutoRaiseInterval=0
+BorderSnapZone=10
+ClickRaise=on
+FocusPolicy=ClickToFocus
+MoveMode=Opaque
+ResizeMode=Opaque
+WindowSnapZone=10
+WindowsPlacement=Smart
