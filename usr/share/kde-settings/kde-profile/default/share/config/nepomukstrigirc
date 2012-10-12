@@ -1,6 +1,6 @@
 [General]
 #exclude filters=.*/,.*,*~,*.part
-folders[$e]=$HOME/Desktop,$HOME/Documents,$HOME/Pictures,$HOME/Movies,$HOME/Music
+folders[$e]=$(xdg-user-dir DESKTOP),$(xdg-user-dir DOCUMENTS),$(xdg-user-dir PICTURES),$(xdg-user-dir VIDEOS),$(xdg-user-dir MUSIC)
 #index hidden folders=false
 #index newly mounted=false
 

@@ -1,0 +1,6 @@
+[Settings]
+Directory[$e]=$(xdg-user-dir PICTURES)
+EffectsEnabled=false
+ShowRandom=true
+SubDirectory=false
+ZoomImages=true
