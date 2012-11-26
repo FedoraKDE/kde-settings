@@ -1,0 +1,46 @@
+[1]
+Description=(Default) Disable focus stealing prevention for XV
+fsplevel=0
+fsplevelrule=2
+types=4294967295
+wmclass=^xv .*
+wmclasscomplete=true
+wmclassmatch=3
+
+[2]
+Description=Application settings for gvim
+strictgeometry=false
+strictgeometryrule=2
+types=4294967295
+wmclass=gvim
+wmclasscomplete=false
+wmclassmatch=1
+
+[3]
+Description=Application settings for terminator
+strictgeometry=false
+strictgeometryrule=2
+types=4294967295
+wmclass=terminator
+wmclasscomplete=false
+wmclassmatch=1
+
+[4]
+Description=Application settings for emacs
+strictgeometry=false
+strictgeometryrule=2
+types=4294967295
+wmclass=emacs
+wmclasscomplete=false
+wmclassmatch=1
+
+[5]
+Description=Window settings for gimp
+strictgeometry=false
+strictgeometryrule=2
+types=256
+windowrole=gimp-toolbox
+windowrolematch=1
+wmclass=gimp
+wmclasscomplete=false
+wmclassmatch=1
