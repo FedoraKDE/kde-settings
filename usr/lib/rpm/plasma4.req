@@ -34,6 +34,7 @@ while read instfile ; do
       done
     fi
     if [ -n "$scriptengines" ]; then
+      unset IFS
       for scriptengine in $scriptengines ; do
         if [ -n "$scriptengine" ]; then
           echo 'plasma4(scriptengine-'$scriptengine')'
