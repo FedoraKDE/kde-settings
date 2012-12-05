@@ -18,7 +18,7 @@ while read instfile ; do
     *.desktop)
 
     # check for script engine dependencies
-    scriptengine=`cat $instfile | grep ^X-Plasma-API= | cut -d'=' -f2`
+    scriptengines=`cat $instfile | grep ^X-Plasma-API= | cut -d'=' -f2`
     if [ -n "$scriptengine" ]; then
       # check if this IS the script engine
       kde_servicetypes=`cat $instfile | grep ^X-KDE-ServiceTypes= | cut -d'=' -f2`
@@ -33,8 +33,12 @@ while read instfile ; do
         fi
       done
     fi
-    if [ -n "$scriptengine" ]; then
-      echo 'plasma4(scriptengine-'$scriptengine')'
+    if [ -n "$scriptengines" ]; then
+      for scriptengine in $scriptengines ; do
+        if [ -n "$scriptengine" ]; then
+          echo 'plasma4(scriptengine-'$scriptengine')'
+        fi
+      done
     fi
 
     # check for data engine dependencies
