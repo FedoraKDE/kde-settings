@@ -18,7 +18,7 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.9.1
+kde=4.10.1
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -47,9 +47,10 @@ else
 
 ## update sources
 # maybe grep sources instead?  -- rex
-if [ ! -f ${src}-${kde}.tar.xz -a -f  "../kde4/${src}-${kde}.tar.xz" ]; then
-cp -alf "../kde4/${src}-${kde}.tar.xz" .
-fedpkg new-sources ${src}-${kde}.tar.xz
+ext=xz
+if [ ! -f ${src}-${kde}.tar.${ext} -a -f  "../kde4/${src}-${kde}.tar.${ext}" ]; then
+cp -alf "../kde4/${src}-${kde}.tar.${ext}" .
+fedpkg new-sources ${src}-${kde}.tar.${ext}
 fi
 
 ## update spec
@@ -84,6 +85,7 @@ fedpkg commit --clog -p
 fi
 
 fedpkg build --nowait ${koji_opts}
+fedpkg clean
 
 popd
 
@@ -91,4 +93,4 @@ echo ${pkg} >> ${build_log}
 
 # stupid requirement @ rex's site, whose IT assumes you're a hacker 
 # for doing > 25 outgoing ssh connects in 5 minutes
-#sleep 5 
+#sleep 20
