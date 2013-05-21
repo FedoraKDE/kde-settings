@@ -1,2 +1,0 @@
-enable kdm.service
-disable gdm.service
