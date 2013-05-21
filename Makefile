@@ -1,5 +1,5 @@
 NAME=kde-settings
-VERSION=19-20
+VERSION=19-21
 SVNTAG=${NAME}-${VERSION}
 
 release: tag archive upload
