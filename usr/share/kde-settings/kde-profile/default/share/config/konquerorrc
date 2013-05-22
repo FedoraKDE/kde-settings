@@ -2,6 +2,7 @@
 EnableJavaScript=true
 EnableJSDebugOutput=false
 EnablePlugins=true
+EnableJava=false
 
 [HTML Settings]
 AutoDelayedActions=true
