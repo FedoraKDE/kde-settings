@@ -432,7 +432,8 @@ ForgingSeed=1108476160
 # Show the "Console Login" action in the greeter (if ServerTTY/ConsoleTTYs
 # is configured).
 # Default is true
-#AllowConsole=false
+# Disabled as per rhbz#966095.
+AllowConsole=false
 # A program to run while the greeter is visible. It is supposed to preload
 # as much as possible of the session that is going to be started (most
 # probably).
