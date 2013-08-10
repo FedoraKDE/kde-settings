@@ -10,7 +10,7 @@ branch=master
 #merge=master
 
 ## koji options
-#koji_opts="--background"
+koji_opts="--background"
 if [ "${branch}" != "master" ]; then
 koji_opts="${koji_opts} --target ${branch}-kde"
 fi
@@ -18,7 +18,7 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.10.4
+kde=4.11.0
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -31,14 +31,17 @@ pushd "${pkg}"
 git reset --hard HEAD && \
 fedpkg switch-branch ${branch} && \
 fedpkg pull
+
+if [ ! -z "${merge}" ]; then
+fedpkg switch-branch ${merge} && fedpkg pull
+fi
+
 else
 fedpkg clone "${pkg}"
 pushd "${pkg}"
 fi
 
 if [ ! -z "${merge}" ]; then
-
-fedpkg switch-branch ${merge} && fedpkg pull 
 
 fedpkg switch-branch ${branch} && \
 git merge ${merge} && \
