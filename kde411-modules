@@ -1,3 +1,4 @@
+amor
 analitza
 ark
 audiocd-kio
@@ -49,6 +50,8 @@ kdegraphics-strigi-analyzer
 kdegraphics-thumbnailers
 kdelibs
 kdemultimedia
+kdenetwork-filesharing
+kdenetwork-strigi-analyzers
 kdepim
 kdepimlibs
 kdepim-runtime
@@ -64,6 +67,7 @@ kde-wallpapers
 kde-workspace
 kdf
 kdiamond
+kdnssd
 kfloppy
 kfourinline
 kgamma
@@ -97,9 +101,13 @@ kolourpaint
 kompare
 konquest
 konsole
+kopete
 kpat
+kppp
+krdc
 kremotecontrol
 kreversi
+krfb
 kross-interpreters
 kruler
 ksaneplugin
@@ -113,10 +121,12 @@ ksquares
 kstars
 ksudoku
 ksystemlog
+kteatime
 ktimer
 ktouch
 ktuberling
 kturtle
+ktux
 kubrick
 kuser
 kwallet
