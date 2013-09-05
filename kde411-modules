@@ -50,6 +50,7 @@ kdegraphics-strigi-analyzer
 kdegraphics-thumbnailers
 kdelibs
 kdemultimedia
+kdenetwork
 kdenetwork-filesharing
 kdenetwork-strigi-analyzers
 kdepim
@@ -58,6 +59,7 @@ kdepim-runtime
 kdeplasma-addons
 kde-print-manager
 kde-runtime
+kdesdk
 kdesdk-kioslaves
 kdesdk-strigi-analyzers
 kdesdk-thumbnailers
