@@ -443,7 +443,7 @@ AllowConsole=false
 UseTheme=true
 # The theme to use for the greeter. Can point to either a directory or an XML
 # file. Default is "/usr/share/kde4/apps/kdm/themes/circles"
-Theme=/usr/share/kde4/apps/kdm/themes/SchroedingerCat
+Theme=/usr/share/kde4/apps/kdm/themes/Heisenbug
 # Set the widget color scheme 
 #ColorScheme=ObsidianCoast
 
