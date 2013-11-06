@@ -13,6 +13,6 @@ Pattern=
 Program=
 UseSHM=false
 ReverseBlending=false
-Wallpaper=/usr/share/backgrounds/laughlin/default/standard/laughlin.png
+Wallpaper=/usr/share/backgrounds/default.png
 WallpaperList=
 WallpaperMode=Scaled
