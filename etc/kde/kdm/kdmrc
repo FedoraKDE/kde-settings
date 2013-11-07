@@ -401,11 +401,18 @@ UseBackground=true
 # The configuration file to be used by krootimage.
 # Default is "/usr/share/config/kdm/backgroundrc"
 BackgroundCfg=/var/lib/kdm/backgroundrc
+# Whether to grab keyboard and mouse while the greeter is visible. Grabs
+# may improve security, but make on-screen keyboards, etc. unusable.
+# "Never" - never grab
+# "IfNoAuth" - grab if the display requires no X authorization
+# "Always" - always grab
+# Default is IfNoAuth
+GrabInput=Always
 # Hold the X-server grabbed the whole time the greeter is visible. This
 # may be more secure, but it will disable any background and other
 # X-clients started from the Setup script.
 # Default is false
-#GrabServer=true
+GrabServer=false
 # How many seconds to wait for grab to succeed.
 # Default is 3
 #GrabTimeout=3
