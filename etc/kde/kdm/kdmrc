@@ -426,7 +426,7 @@ EchoPasswd=true
 UseBackground=true
 # The configuration file to be used by krootimage.
 # Default is "/usr/share/config/kdm/backgroundrc"
-BackgroundCfg=/etc/kde/kdm/backgroundrc
+BackgroundCfg=/var/lib/kdm/backgroundrc
 # Whether to grab keyboard and mouse while the greeter is visible. Grabs
 # may improve security, but make on-screen keyboards, etc. unusable.
 # "Never" - never grab
