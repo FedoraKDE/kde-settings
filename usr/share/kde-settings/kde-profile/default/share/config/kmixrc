@@ -7,3 +7,4 @@ Menubar=true
 TrayVolumeControl=true
 Visible=false
 startkdeRestore=false
+VolumeFeedback=true
