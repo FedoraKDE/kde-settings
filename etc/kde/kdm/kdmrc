@@ -458,9 +458,9 @@ Theme=/usr/share/kde4/apps/kdm/themes/SchroedingerCat
 [X-:*-Core]
 # How often to try to run the X-server. Running includes executing it and
 # waiting for it to come up. Default is 1
-#ServerAttempts=1
+ServerAttempts=2
 # How long to wait for a local X-server to come up. Default is 15
-ServerTimeout=30
+ServerTimeout=60
 # The command line to start the X-server, without display number and VT spec.
 # This string is subject to word splitting. Default is "/usr/X11R6/bin/X"
 #ServerCmd=/usr/X11R6/bin/X
