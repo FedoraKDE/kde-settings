@@ -24,11 +24,15 @@ if [ -x "${GPG_AGENT}" ] ; then
   fi
 
   if [ -f "${GPG_AGENT_INFO_FILE}" ]; then
-    eval "$(cat \"${GPG_AGENT_INFO_FILE}\")"
-    eval "$(cut -d= -f 1 < \"${GPG_AGENT_INFO_FILE}\" | xargs echo export)"
+    eval "$(cat "${GPG_AGENT_INFO_FILE}")"
+    eval "$(cut -d= -f1 < "${GPG_AGENT_INFO_FILE}" | xargs echo export)"
     export GPG_TTY=$(tty)
   else
     eval "$(${GPG_AGENT} -s --daemon --write-env-file ${GPG_AGENT_INFO_FILE})"
   fi
 
+  unset GPG_AGENT_INFO_FILE
+
 fi
+
+unset GPG_AGENT
