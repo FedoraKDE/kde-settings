@@ -1,5 +1,5 @@
 [Auto Allow]
-kdewallet=KDE Wallet Manager,KMail,Telepathy Authentication Handler
+kdewallet=KDE Daemon,KDE Wallet Manager,KMail,Telepathy Authentication Handler
 ksirk=KDE Wallet Manager,KsirK
 
 [Auto Deny]
