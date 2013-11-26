@@ -15,4 +15,5 @@ Launch Manager=true
 Leave Manager Open=false
 Leave Open=true
 Prompt on Open=true
+Silently Create Initial Wallet=true
 Use One Wallet=true
