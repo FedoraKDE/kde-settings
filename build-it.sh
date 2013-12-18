@@ -7,7 +7,7 @@ src=${2:-${pkg}}
 branch=master
 
 ## if defined, merge from this branch rather than editing anything
-#merge=master
+#merge=f20
 
 ## koji options
 koji_opts="--background"
@@ -18,7 +18,7 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.11.90
+kde=4.12.0
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -44,8 +44,7 @@ fi
 if [ ! -z "${merge}" ]; then
 
 fedpkg switch-branch ${branch} && \
-git merge ${merge} && \
-fedpkg push
+git merge ${merge}
 
 else
 
@@ -85,9 +84,10 @@ then
     fedpkg prep || exit 1
 fi
 
-fedpkg commit --clog -p
+fedpkg commit --clog 
 fi
 
+fedpkg push 
 fedpkg build --nowait ${koji_opts}
 fedpkg clean
 
