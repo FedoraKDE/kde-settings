@@ -18,7 +18,7 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.12.0
+kde=4.12.90
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -28,7 +28,7 @@ set -x
 
 if [ -d "${pkg}/" ]; then
 pushd "${pkg}"
-git reset --hard HEAD && \
+it reset --hard HEAD && \
 fedpkg switch-branch ${branch} && \
 fedpkg pull
 
@@ -51,8 +51,8 @@ else
 ## update sources
 # maybe grep sources instead?  -- rex
 ext=xz
-if [ ! -f ${src}-${kde}.tar.${ext} -a -f  "../kde4/${src}-${kde}.tar.${ext}" ]; then
-cp -alf "../kde4/${src}-${kde}.tar.${ext}" .
+if [ ! -f ${src}-${kde}.tar.${ext} -a -f  "../src/${src}-${kde}.tar.${ext}" ]; then
+cp -alf "../src/${src}-${kde}.tar.${ext}" .
 fedpkg new-sources ${src}-${kde}.tar.${ext}
 fi
 
