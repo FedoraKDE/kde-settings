@@ -71,7 +71,7 @@ kdeutils
 kde-wallpapers
 kdf
 kdiamond
-kdnssd
+kdnssd zeroconf-ioslave
 kfilemetadata
 kfloppy
 kfourinline
