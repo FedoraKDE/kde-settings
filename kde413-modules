@@ -60,7 +60,7 @@ kdepim
 kdepimlibs
 kdepim-runtime
 kdeplasma-addons
-kde-print-manager
+kde-print-manager print-manager
 kde-runtime
 kdesdk
 kdesdk-kioslaves
