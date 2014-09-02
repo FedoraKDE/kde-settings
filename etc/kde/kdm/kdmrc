@@ -341,7 +341,7 @@ LogoPixmap=/usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png
 # - %m -> the machine (hardware) type
 # - %% -> a single %
 # Default is "Welcome to %s at %n"
-GreetString=Fedora 20 (Heisenbug)
+GreetString=Fedora 21 (Twenty One)
 # Whether the fonts used in the greeter should be antialiased.
 # Default is false
 AntiAliasing=true
@@ -477,7 +477,7 @@ UseTheme=true
 # The theme to use for the greeter. Can point to either a directory or an XML
 # file.
 # Default is ""
-Theme=/usr/share/kde4/apps/kdm/themes/Heisenbug
+Theme=/usr/share/kde4/apps/kdm/themes/F21
 # Enable the Alt-Ctrl-D shortcut to toggle greeter theme debugging.
 # Default is false
 #AllowThemeDebug=true
