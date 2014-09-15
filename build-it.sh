@@ -18,13 +18,13 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.13.3
+kde=4.14.1
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
 
-# copious debug output for now
-set -x
+# copious debug output
+#set -x
 
 if [ -d "${pkg}/" ]; then
 pushd "${pkg}"
@@ -81,7 +81,7 @@ rpmdev-bumpspec --comment="${kde}" ${pkg}.spec
 # Test prep to see if all patches can be applied successfully
 if [ "$use_prep" == "true" ];
 then
-    fedpkg prep || exit 1
+    fedpkg prep > /dev/null || exit 1
 fi
 
 fedpkg commit --clog 
@@ -95,6 +95,6 @@ popd
 
 echo ${pkg} >> ${build_log} 
 
-# stupid requirement @ rex's site, whose IT assumes you're a hacker 
+# silly requirement @ rex's site, whose IT assumes you're a hacker 
 # for doing > 25 outgoing ssh connects in 5 minutes
 #sleep 20
