@@ -45,6 +45,10 @@ if [ ! -z "${merge}" ]; then
 
 fedpkg switch-branch ${branch} && \
 git merge --no-edit ${merge}
+if [ $? -ne 0 ]; then
+  date >> FAILED.log
+  exit $?
+fi
 
 else
 
@@ -60,7 +64,7 @@ fi
 # check if needed
 old_version=$(grep "^Version:" ${pkg}.spec | awk '{print $2}')
 
-rpmdev-vercmp $kde $old_version
+rpmdev-vercmp $kde $old_version > /dev/null
 case $? in
     0)  printf "Package has been already updated\n"
         exit 0
@@ -82,7 +86,7 @@ rpmdev-bumpspec --comment="${kde}" ${pkg}.spec
 if [ "$use_prep" == "true" ]; then
     fedpkg prep > /dev/null
     if [ $? -ne 0 ]; then
-        echo ${pkg} >> FAILED.log
+        date >> FAILED.log
         exit $? 
     fi
 fi
@@ -90,7 +94,7 @@ fi
 fedpkg commit --clog 
 fi
 
-fedpkg push 
+fedpkg push && \
 fedpkg build --nowait ${koji_opts}
 fedpkg clean
 
