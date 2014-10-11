@@ -18,7 +18,7 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.14.1
+kde=4.14.2
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -44,7 +44,7 @@ fi
 if [ ! -z "${merge}" ]; then
 
 fedpkg switch-branch ${branch} && \
-git merge ${merge}
+git merge --no-edit ${merge}
 
 else
 
@@ -79,9 +79,12 @@ sed -i \
 rpmdev-bumpspec --comment="${kde}" ${pkg}.spec
 
 # Test prep to see if all patches can be applied successfully
-if [ "$use_prep" == "true" ];
-then
-    fedpkg prep > /dev/null || exit 1
+if [ "$use_prep" == "true" ]; then
+    fedpkg prep > /dev/null
+    if [ $? -ne 0 ]; then
+        echo ${pkg} >> FAILED.log
+        exit $? 
+    fi
 fi
 
 fedpkg commit --clog 
