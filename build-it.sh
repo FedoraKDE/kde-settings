@@ -18,7 +18,7 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=4.14.3
+kde=14.12.2
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -74,10 +74,18 @@ case $? in
         ;;
 esac
 
+# kde-applications bumps (should only need to do this once, and did in 14.12.1 -- rex )
+#sed -i \
+#  -e "s|^Source0: http://download.kde.org/%{stable}/%{version}/|Source0: http://download.kde.org/%{stable}/applications/%{version}/|g" \
+#  -e "s|^BuildRequires: kdelibs4-devel >= %{version}|BuildRequires: kdelibs4-devel >= 4.14|g" \
+#  -e "s|^Requires: kde-runtime%{?_kde4_version: >= %{_kde4_version}}|%{?kde_runtime_requires}|g" \
+#  -e "s|^Requires: kdelibs4%{?_isa}%{?_kde4_version: >= %{_kde4_version}}|%{?kdelibs4_requires}|g" \
+#  ${pkg}.spec
+
 # update
 sed -i \
-  -e "s|Version:.*|Version: ${kde}|" \
-  -e 's|Release:.*|Release: 0%{?dist}|' \
+  -e "s|^Version:.*|Version: ${kde}|" \
+  -e 's|^Release:.*|Release: 0%{?dist}|' \
   ${pkg}.spec
 
 rpmdev-bumpspec --comment="${kde}" ${pkg}.spec
