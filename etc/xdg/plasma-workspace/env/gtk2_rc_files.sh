@@ -1,6 +1,6 @@
 #!/bin/sh
 
-GTK2RC_FILE=/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc
+GTK2RC_FILE=/usr/share/themes/Adwaita/gtk-2.0/gtkrc
 GTK2RC_KDE4=/usr/share/kde-settings/kde-profile/default/gtkrc-2.0-kde4
 GTK2RC_KDE4_HOME=${HOME}/.gtkrc-2.0-kde4
 
