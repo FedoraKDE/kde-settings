@@ -1,11 +1,11 @@
 
 [General]
 ColorScheme=Breeze
-fixed=Oxygen Mono,9,-1,5,50,0,0,0,0,0
-font=Oxygen-Sans,10,-1,5,50,0,0,0,0,0
-menuFont=Oxygen-Sans,10,-1,5,50,0,0,0,0,0
-smallestReadableFont=Oxygen-Sans,8,-1,5,50,0,0,0,0,0
-toolBarFont=Oxygen-Sans,9,-1,5,50,0,0,0,0,0
+fixed=Monospace,10,-1,5,50,0,0,0,0,0
+font=Sans Serif,10,-1,5,50,0,0,0,0,0
+menuFont=Sans Serif,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Sans Serif,8,-1,5,50,0,0,0,0,0
+toolBarFont=Sans Serif,9,-1,5,50,0,0,0,0,0
 widgetStyle=breeze
 
 [Icons]

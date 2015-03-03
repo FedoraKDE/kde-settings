@@ -9,15 +9,14 @@ font=Sans Serif,10,-1,5,50,0,0,0,0,0
 menuFont=Sans Serif,10,-1,5,50,0,0,0,0,0
 smallestReadableFont=Sans Serif,8,-1,5,50,0,0,0,0,0
 toolBarFont=Sans Serif,10,-1,5,50,0,0,0,0,0
-widgetStyle=oxygen
+widgetStyle=breeze
 XftAntialias=true
 
 [WM]
 activeFont=Sans Serif,9,-1,5,50,0,0,0,0,0
 
 [Icons]
-# See http://bugzilla.redhat.com/615621  (Inherits=oxygen gone bad)
-#Theme=Fedora-KDE
+Theme=breeze
 
 [KSpell]
 KSpell_Client=4
