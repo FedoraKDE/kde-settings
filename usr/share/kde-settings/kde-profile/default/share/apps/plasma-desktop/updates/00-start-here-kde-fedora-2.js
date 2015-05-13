@@ -31,7 +31,7 @@ for (i = 0; i < pids.length; ++i) {
   ids = p.widgetIds;
   for (j = 0; j < ids.length; ++j) {
     w = p.widgetById(ids[j]);
-    if (!w || (w.type != "launcher" && w.type != "simplelauncher")) continue;
+    if (!w || w.type != "org.kde.plasma.kickoff") continue;
     launcherFound = true;
     if ( w.readConfig("icon", "start-here-kde") == "start-here-kde" ||
          w.readConfig("icon", "start-here-kde") == "start-here" ) {
