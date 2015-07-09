@@ -1,6 +1,7 @@
 extra-cmake-modules
 kf5
 kf5-attica
+kf5-bluez-qt
 kf5-frameworkintegration
 kf5-kactivities
 kf5-kapidox
@@ -42,7 +43,9 @@ kf5-kmediaplayer
 kf5-knewstuff
 kf5-knotifications
 kf5-knotifyconfig
+kf5-kpackage
 kf5-kparts
+kf5-kpeople
 kf5-kplotting
 kf5-kpty
 kf5-kross
@@ -55,7 +58,10 @@ kf5-kwallet
 kf5-kwidgetsaddons
 kf5-kwindowsystem
 kf5-kxmlgui
-kf5-plasma
+kf5-kxmlrpcclient
+kf5-modemmanager-qt
+kf5-networkmanager-qt
+kf5-plasma plasma-framework
 kf5-solid
 kf5-sonnet
 kf5-threadweaver
