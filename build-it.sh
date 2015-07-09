@@ -10,7 +10,7 @@ branch=master
 #merge=master
 
 ## koji options
-koji_opts="--background"
+koji_opts="--background --skip-nvr-check"
 if [ "${branch}" != "master" ]; then
 koji_opts="${koji_opts} --target ${branch}-kde"
 fi
@@ -18,7 +18,7 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=14.12.2
+kde=15.04.3
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -27,7 +27,7 @@ use_prep="true"
 #set -x
 
 if [ -d "${pkg}/" ]; then
-pushd "${pkg}"
+pushd "${pkg}" >& /dev/null
 git reset --hard HEAD && \
 fedpkg switch-branch ${branch} && \
 fedpkg pull
@@ -38,7 +38,7 @@ fi
 
 else
 fedpkg clone "${pkg}"
-pushd "${pkg}"
+pushd "${pkg}" >& /dev/null
 fi
 
 if [ ! -z "${merge}" ]; then
@@ -106,7 +106,7 @@ fedpkg push && \
 fedpkg build --nowait ${koji_opts}
 fedpkg clean
 
-popd
+popd >& /dev/null
 
 echo ${pkg} >> ${build_log} 
 
