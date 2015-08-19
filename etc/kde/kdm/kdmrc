@@ -477,7 +477,7 @@ UseTheme=true
 # The theme to use for the greeter. Can point to either a directory or an XML
 # file.
 # Default is ""
-Theme=/usr/share/kde4/apps/kdm/themes/F22
+Theme=/usr/share/kde4/apps/kdm/themes/F23
 # Enable the Alt-Ctrl-D shortcut to toggle greeter theme debugging.
 # Default is false
 #AllowThemeDebug=true

@@ -1,16 +1,16 @@
 
 [General]
-ColorScheme=Breeze
+#ColorScheme=Breeze
 fixed=Monospace,10,-1,5,50,0,0,0,0,0
 font=Sans Serif,10,-1,5,50,0,0,0,0,0
 menuFont=Sans Serif,10,-1,5,50,0,0,0,0,0
 smallestReadableFont=Sans Serif,8,-1,5,50,0,0,0,0,0
 toolBarFont=Sans Serif,9,-1,5,50,0,0,0,0,0
-widgetStyle=breeze
+#widgetStyle=breeze
 
 [Icons]
-Theme=breeze
+#Theme=breeze
 
 [KDE]
-ColorScheme=Breeze
-widgetStyle=breeze
+#ColorScheme=Breeze
+#widgetStyle=breeze
