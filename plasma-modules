@@ -4,7 +4,7 @@ kdecoration
 kde-gtk-config
 kdeplasma-addons
 kf5-kwayland kwayland
-#kgamma5
+kgamma kgamma5
 khelpcenter
 khotkeys
 kinfocenter
@@ -12,7 +12,7 @@ kmenuedit
 kscreen
 ksshaskpass
 ksysguard
-kwallet-pam
+pam-kwallet kwallet-pam
 kwayland-integration
 kwin
 kwrited
