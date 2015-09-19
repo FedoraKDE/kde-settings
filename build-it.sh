@@ -18,7 +18,8 @@ fi
 # log builds done to this file
 build_log=build-log.txt
 
-kde=15.04.3
+#kde=4.14.12
+kde=15.08.1
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -39,6 +40,13 @@ fi
 else
 fedpkg clone "${pkg}"
 pushd "${pkg}" >& /dev/null
+fi
+
+# bail if package is eol'd
+if [ -f "dead.package" ]; then
+echo -n "dead.package: "
+cat dead.package
+exit 0
 fi
 
 if [ ! -z "${merge}" ]; then
