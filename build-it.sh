@@ -61,6 +61,12 @@ fi
 else
 
 ## update sources
+
+# check for sources.basename
+if [ "${src}" == "${pkg}" -a -f "sources.basename"]; then
+src="$(cat sources.basename)"
+fi
+
 # maybe grep sources instead?  -- rex
 ext=xz
 if [ ! -f ${src}-${kde}.tar.${ext} -a -f  "../src/${src}-${kde}.tar.${ext}" ]; then
