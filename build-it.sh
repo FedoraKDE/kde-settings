@@ -63,7 +63,7 @@ else
 ## update sources
 
 # check for sources.basename
-if [ "${src}" == "${pkg}" -a -f "sources.basename"]; then
+if [ "${src}" == "${pkg}" -a -f "sources.basename" ]; then
 src="$(cat sources.basename)"
 fi
 
