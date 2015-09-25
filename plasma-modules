@@ -3,8 +3,8 @@ kde-cli-tools
 kdecoration
 kde-gtk-config
 kdeplasma-addons
-kf5-kwayland kwayland
-kgamma kgamma5
+kf5-kwayland
+kgamma
 khelpcenter
 khotkeys
 kinfocenter
@@ -12,26 +12,26 @@ kmenuedit
 kscreen
 ksshaskpass
 ksysguard
-pam-kwallet kwallet-pam
+pam-kwallet
 kwayland-integration
 kwin
 kwrited
-libkscreen-qt5 libkscreen
+libkscreen-qt5
 libksysguard
 muon
 oxygen-fonts
-plasma-breeze breeze
+plasma-breeze
 plasma-desktop
 #plasma-mediacenter
-plasma-milou milou
+plasma-milou
 plasma-nm
-plasma-oxygen oxygen
+plasma-oxygen
 plasma-pa
 plasma-sdk
 plasma-systemsettings
 plasma-workspace
 plasma-workspace-wallpapers
-polkit-kde polkit-kde-agent-1
+polkit-kde
 powerdevil
 sddm-kcm
 #user-manager
