@@ -20,6 +20,7 @@ build_log=build-log.txt
 
 #kde=4.14.12
 kde=15.08.1
+#kde=5.4.2
 
 # true if fedpkg prep should be executed before pushing
 use_prep="true"
@@ -62,9 +63,12 @@ else
 
 ## update sources
 
-# check for sources.basename
-if [ "${src}" == "${pkg}" -a -f "sources.basename" ]; then
-src="$(cat sources.basename)"
+if [ "${src}" == "${pkg}" ]; then
+  # check for sources.basename
+  if [ -f "sources.basename" ]; then
+    src="$(cat sources.basename)"
+  fi
+
 fi
 
 # maybe grep sources instead?  -- rex
