@@ -19,7 +19,7 @@ fi
 build_log=build-log.txt
 
 #kde=4.14.12
-kde=15.08.1
+kde=15.08.3
 #kde=5.4.2
 
 # true if fedpkg prep should be executed before pushing
