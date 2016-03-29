@@ -1,0 +1,5 @@
+[General]
+# default (aka "Start with an empty session")
+# restorePreviousLogout
+# restoreSavedSession
+loginMode=default
