@@ -31,11 +31,14 @@ for (i = 0; i < pids.length; ++i) {
   ids = p.widgetIds;
   for (j = 0; j < ids.length; ++j) {
     w = p.widgetById(ids[j]);
-    if (!w || w.type != "org.kde.plasma.kickoff") continue;
+    if (!w) continue;
+    if ( w.type != "org.kde.plasma.kickoff" &&
+         w.type != "org.kde.plasma.kicker"  &&
+         w.type != "org.kde.plasma.kickerdash" ) 
+      continue;
     launcherFound = true;
-    if ( w.readConfig("icon", "start-here-kde") == "start-here-kde" ||
-         w.readConfig("icon", "start-here-kde") == "start-here" ) {
-      w.writeConfig("icon", "start-here-kde-fedora");
+    if ( w.readConfig("icon", "start-here-kde") == "start-here-kde" ) {
+      w.writeConfig("icon", "start-here");
     }
     break;
   }
