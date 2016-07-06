@@ -37,7 +37,9 @@ for (i = 0; i < pids.length; ++i) {
          w.type != "org.kde.plasma.kickerdash" ) 
       continue;
     launcherFound = true;
-    if ( w.readConfig("icon", "start-here-kde") == "start-here-kde" ) {
+    if ( w.readConfig("icon", "start-here-kde") == "start-here-kde" ||
+         w.readConfig("icon", "start-here-kde") == "start-here-kde-fedora" ) {
+      w.currentConfigGroup = ["General"];
       w.writeConfig("icon", "start-here");
     }
     break;
