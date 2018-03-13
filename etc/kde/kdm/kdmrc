@@ -341,7 +341,7 @@ LogoPixmap=/usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png
 # - %m -> the machine (hardware) type
 # - %% -> a single %
 # Default is "Welcome to %s at %n"
-GreetString=Fedora 26 (Twenty Six)
+GreetString=Fedora 28 (Twenty Eight)
 # Whether the fonts used in the greeter should be antialiased.
 # Default is false
 AntiAliasing=true
