@@ -26,11 +26,6 @@ KSpell_Encoding=11
 K3Spell_Client=4
 K3Spell_Encoding=11
 
-[Paths]
-Desktop[$e]=$(xdg-user-dir DESKTOP)
-Documents[$e]=$(xdg-user-dir DOCUMENTS)
-#Trash[$e]=$(xdg-user-dir DESKTOP)/Trash/
-
 [Toolbar style]
 Highlighting=true
 IconText=IconOnly
